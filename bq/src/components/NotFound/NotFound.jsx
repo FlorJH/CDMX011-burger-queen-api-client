@@ -1,8 +1,8 @@
 import React from "react";
-import img from "../assets/error404.png"
+import img from "../../assets/error.png"
 const NotFound = () => {
   return (
-    <div>
+    <div className= "container__notfound">
       <img src={img} alt="error" />
     </div>
   );

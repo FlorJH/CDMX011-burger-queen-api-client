@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 94vh;
+  min-height: 100vh;
   overflow-y: hidden !important;
   overflow-x: hidden;
   margin: 0px;
@@ -30,33 +30,36 @@
 
   .logo {
     display: flex;
-    width: 100%;
-    height: 160px;
+    width: 100vw;
+    height: 21.5vh;
     justify-content: flex-end;
-    margin: 0px;
+    margin-top: 3vh;
     padding: 0px;
-    
+  }
+  #img-logo{
+    width: 65vw;
+    height: 25vh;
+    margin-right: -8vw;
   }
   .img__hamburger {
-    width: 600px;
-    height: 350px;
+    width: 40vw;
+    min-height: 40vh;
+    max-height: 50vh;
+    margin-bottom: 10vh;
   }
-
   .login__form {
     width: 100%;
     max-width: 80%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-      
+
 
     form {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 4.6vh; //2.6
+      align-items: center;
 
-     
     }
 
     button {
@@ -64,7 +67,7 @@
         background-color: $primary;
         color: $text-on-secondary;
         padding: 0;
-        height: 40px;
+        height: 35px;
         border-radius: 10px;
         border-color: $primary;
         border: 1px solid $secondary-light;
@@ -75,14 +78,14 @@
         box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
         -webkit-box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
         -moz-box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
-        width: 100%;
+        width: 87%;
         transition: all 300ms linear;
         &:hover{
           background-color: $secondary;
           color:$secondary-light;
           font-weight: bolder;
         }
-       
+
       }
     }
     input {
@@ -96,6 +99,7 @@
       padding: 15px;
       color: $text-on-primary;
       width: 80%;
+      text-indent: 6.5vh;
 
       &:focus {
         border-bottom-color: $secondary;
@@ -111,8 +115,69 @@
       height: 50px;
     }
     .icon {
+      position: fixed;
+      margin-left: -15vw;
       width: 30px;
       height: 30px;
     }
+
+    @-moz-document url-prefix() {
+      .icon {
+        margin-left: -31vw;
+      }
+
+    }
+
   }
+
+  @media all and (orientation: portrait) {
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-left: 24vw;
+      height: 20vh;
+    }
+   
+
+
+    .img__hamburger {
+      position: fixed;
+      margin-top: -10px;
+      min-width: 10vw;
+      max-width: 20vw;
+      min-height: 9vh;
+      max-height: 20vh;
+      // background: rgba(0, 0, 0, 0.205);
+      // background-image: linear-gradient( $secondary-dark, rgba(0, 0, 0, 0));
+      background-image: linear-gradient($login-background, rgba(0, 0, 0, 0));
+      padding: 2vh;
+      border-top-left-radius: 90px;
+      border-top-right-radius: 90px;
+    }
+    .column {
+      width: 90%;
+    }
+
+    .login__form {
+    form {
+    //  background-color:$secondary-dark;
+    background-color:$login-background;
+     border-radius: 10px;
+     padding: 4vh 0px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .icon  {
+      display: flex;
+      margin-left: -27vw;
+    }
+    @-moz-document url-prefix() {
+      .icon {
+        margin-left: -53vw;
+      }
+
+    }
+  }
+}
 }

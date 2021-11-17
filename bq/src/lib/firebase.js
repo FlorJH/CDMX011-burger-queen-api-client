@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-//import { getFirestore } from "firebase/firestore";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDgGPjuT8v8_3XiV1MjOoKc7N9yw2PF8_s",
