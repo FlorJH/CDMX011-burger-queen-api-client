@@ -2,10 +2,9 @@
   "product": [
     {
       "id": 1,
-
-      "name":"Coffee",
+      "name": "Coffee",
       "price": "5",
-      "image":"https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenucafenegro.png?alt=media&token=4b0e2d1e-b961-45da-9f3c-69104d139573",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenucafenegro.png?alt=media&token=4b0e2d1e-b961-45da-9f3c-69104d139573",
       "type": "Breakfast",
       "dateEntry": null
     },
@@ -85,9 +84,7 @@
       "id": 11,
       "name": "Soda 500ml",
       "price": 7,
-
       "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fgaseosas.png?alt=media&token=4ebea2e8-f568-470c-973d-caa93edc60fd",
-
       "type": "Lunch",
       "dateEntry": null
     },
@@ -101,17 +98,6 @@
     }
   ],
   "order": [
-    {
-      "id":23,
-      "userId":301,
-      "client":"Flor",
-      "products":[{
-          "id": 6
-      }],
-      "cantidad":2,
-      "Estatus":"pending",
-      "dateEntry":null,
-      "dateProcessed":null
-    }
+   
   ]
 }

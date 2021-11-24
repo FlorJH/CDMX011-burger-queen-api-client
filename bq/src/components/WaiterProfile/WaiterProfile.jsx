@@ -18,7 +18,9 @@ const WaiterProfile = () => {
   const [loading, setLoading] = useState(false);
 
   const [typeFood, setTypeFood] = useState('Breakfast');
+  const [orderItems, setOrder] = useState([]);
 
+  let api = helpHttp();
   let url = `http://localhost:5000/product?type=${typeFood}`;
 
   useEffect(() => {
@@ -38,6 +40,46 @@ const WaiterProfile = () => {
       });
   }, [url]);
 
+  const addToOrder = (foodItem) => {
+    console.log('holo' + foodItem.id)
+    const exist = orderItems.find(x => x.id === foodItem.id)
+    if (exist) {
+      setOrder(orderItems.map((x) => x.id === foodItem.id ? { ...exist, qty: exist.qty + 1 } : x
+      ));
+    } else {
+      setOrder([...orderItems, { ...foodItem, qty: 1 }])
+    }
+  }
+
+  const deleteToOrder = (foodItem) => {
+const exist=orderItems.find((x) => x.id=== foodItem.id)
+if (exist.qty === 1) {
+  setOrder(orderItems.filter((x)=> x.id !== foodItem.id));
+  }
+  else{
+    setOrder(orderItems.map((x) => x.id === foodItem.id ? {...exist, qty:exist.qty-1}: x))
+  }
+  }
+
+  const createOrder= (dataOrder, total) => {
+   
+    // dataOrder.id = Date.now();
+    //console.log(data);
+
+    let options = {
+      body: {dataOrder, total},
+      headers: { "content-type": "application/json" },
+    };
+
+    api.post('http://localhost:5000/order', options).then((res) => {
+      //console.log(res);
+      if (!res.err) {
+        setDb([...db, res]);
+      } else {
+        setError(res);
+      }
+    });
+  };
 
   return (
     <div>
@@ -47,22 +89,27 @@ const WaiterProfile = () => {
 
         <div className="container__menu">
           <section className="column__container">
-            <OrderSummary />
+            <OrderSummary 
+            orderItems={orderItems}
+            addToOrder={addToOrder} 
+            deleteToOrder={deleteToOrder}
+            createOrder={createOrder} />
           </section>
           <section className="column__container">
             {/* <MenuOption /> */}
             <div className="content-menu-option">
               <h3>Menu</h3>
               <section className="section__option">
-                <button className="secondary-button" onClick={()=>{setTypeFood('Breakfast')}}>Breakfast</button>
-                <button className="secondary-button" onClick={()=>{setTypeFood('Lunch')}}>Lunch</button>
+                <button className="secondary-button" onClick={() => { setTypeFood('Breakfast') }}>Breakfast</button>
+                <button className="secondary-button" onClick={() => { setTypeFood('Lunch') }}>Lunch</button>
+
               </section>
             </div>
             <div className="container-food">
               {/* <CrudApiMock /> */}
               {loading && <PreLoad />}
               {error && <NotFound />}
-              {db && <DataIteration data={db} />}
+              {db && <DataIteration data={db} addToOrder={addToOrder} orderItems={orderItems} />}
             </div>
           </section>
         </div>
