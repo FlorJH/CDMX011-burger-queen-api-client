@@ -1,5 +1,5 @@
 export const helpHttp = () => {
-    const customFetch = (endpoint, options) => { //ruta , opciones que puede rcibir fetch
+    const customFetch = (endpoint, options) => { //route , options que puede rcibir fetch
       const defaultHeader = {
         accept: "application/json", 
       };
@@ -15,7 +15,7 @@ export const helpHttp = () => {
       options.body = JSON.stringify(options.body) || false;
       if (!options.body) delete options.body;
   
-      //console.log(options);
+      console.log(options);
       setTimeout(() => controller.abort(), 3000);
   
       return fetch(endpoint, options)
@@ -25,7 +25,7 @@ export const helpHttp = () => {
             : Promise.reject({
                 err: true,
                 status: res.status || "00",
-                statusText: res.statusText || "Ocurrió un error",
+                statusText: res.statusText || "an error occurred",
               })
         )
         .catch((err) => err);

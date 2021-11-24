@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@500&display=swap");
+
+.content-menu-option {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 70px;
+  background-color: rgba(216, 206, 206, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 11%;
+  margin-top: 10px;
+
+  h3 {
+    display: block;
+    font-weight: bold;
+    font-family: "Red Rose", cursive;
+    text-align: center;
+    margin: auto;
+  }
+  .section__option {
+    display: flex;
+    justify-content: space-between;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  button {
+    &.secondary-button {
+      background-color: $primary;
+      color: $text-on-secondary;
+      padding: 0;
+      height: 25px;
+      border-radius: 7px;
+      border-color: $primary;
+      border: 1px solid $secondary-light;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      -webkit-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      -moz-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      width: 45%;
+      transition: all 300ms linear;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $secondary;
+        color: $secondary-light;
+        font-weight: bolder;
+      }
+    }
+  }
+}

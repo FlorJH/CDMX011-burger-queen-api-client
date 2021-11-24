@@ -9,7 +9,7 @@ import SweetAlert from "sweetalert2";
 import { onAuthStateChanged } from "firebase/auth";
 
 const Login = () => {
-
+  console.log(new Date());
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Login = () => {
       if (user) {
         navigate("/WaiterProfile");
         const uid = user.uid;
-        console.log("entry", uid)
+        console.log("entry", uid);
       } else {
         navigate("/");
       }
@@ -36,16 +36,16 @@ const Login = () => {
       } catch (error) {
         console.error(error);
         new SweetAlert({
-        title:'Error',
-        text:error.message,
-        icon:'error',
-        showConfirmButton:false,
-        showCancelButton:true,
-        cancelButtonText:'Ok',
-        cancelButtonColor: '#FF4848',
-        background:'#FAEEE0'
-        // timer: 3000
-      });
+          title: "Error",
+          text: error.message,
+          icon: "error",
+          showConfirmButton: false,
+          showCancelButton: true,
+          cancelButtonText: "Ok",
+          cancelButtonColor: "#FF4848",
+          background: "#FAEEE0",
+          // timer: 3000
+        });
 
         // setError(error.message);
         // setTimeout(() => setError(""), 1500);
@@ -54,22 +54,23 @@ const Login = () => {
   };
   return (
     // <div className="content">
-      <div className="container__Login">
-        <header className="logo">
-          <img id="img-logo" src={logo} alt="logoBQ" />
-        </header>
-        <section className="column">
-          <img className="img__hamburger" src={hamburger} alt="logoBQ" />
-        </section>
-        <section className="column">
-          <div className="login__form">
-            <LoginForm handleSubmit={handleSubmit} />
-            {/* <div className="error__section">{error}</div> */}
-          </div>
-        </section>
+    <div className="container__Login">
+      <header className="logo">
+        <img id="img-logo" src={logo} alt="logoBQ" />
+      </header>
+      <section className="column">
+        <img className="img__hamburger" src={hamburger} alt="logoBQ" />
+      </section>
+      <section className="column">
+        <div className="login__form">
+          <LoginForm handleSubmit={handleSubmit} />
+          {/* <div className="error__section">{error}</div> */}
+        </div>
+      </section>
       {/* </div> */}
       <div>
-      <Footer /></div>
+        <Footer />
+      </div>
     </div>
   );
 };

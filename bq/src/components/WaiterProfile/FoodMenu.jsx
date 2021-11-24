@@ -1,21 +1,23 @@
-import React from "react";
-// import proof from "../../assets/menusandwich.png"
+import React from 'react';
 
-const FoodMenu = ({el}) => {
-  console.log('quien soy'+el)
-  let { name , image} = el;
-  return (
-    <>
+export const FoodMenu = ({el , addToOrder}) => {
+     let { name , image} = el; 
 
-        <div className= "content__menu">
+    //  const addToOrder=(key)=>{
+    //     console.log('id  '+ key);
+        
+    //     return key;//creo que debe ser todo el objeto
+    //  }
+
+    return (
+        
+        <div  onClick={()=>{addToOrder(el)}}  className= "content-menu">
             <picture className="content__img">
-                <img className="imag__menu" src={image} alt="proof" />
+                <img className="imag-menu" src={image} alt="proof" />
             </picture>
-            
             <p className= "title__food">{name}</p>
-        </div>
+        </div>   
+     
+    )
+}
 
-      </>
-  );
-};
-export default FoodMenu;

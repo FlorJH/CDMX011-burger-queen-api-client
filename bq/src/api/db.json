@@ -2,10 +2,10 @@
   "product": [
     {
       "id": 1,
-      "name":"Coffee",
+      "name": "Coffee",
       "price": "5",
-      "image":"https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenucafenegro.png?alt=media&token=4b0e2d1e-b961-45da-9f3c-69104d139573",
-      "type": "Breackfast",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenucafenegro.png?alt=media&token=4b0e2d1e-b961-45da-9f3c-69104d139573",
+      "type": "Breakfast",
       "dateEntry": null
     },
     {
@@ -13,7 +13,7 @@
       "name": "Cappuccino",
       "price": 7,
       "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenucafeconleche.png?alt=media&token=7bc028c2-8dd2-4e04-98e0-69e458d1aee5",
-      "type": "Breackfast",
+      "type": "Breakfast",
       "dateEntry": null
     },
     {
@@ -21,7 +21,7 @@
       "name": "Ham and cheese sandwich",
       "price": 10,
       "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenusandwich.png?alt=media&token=4f75e45c-8bce-4786-a343-4a7c032ccde0",
-      "type": "Breackfast",
+      "type": "Breakfast",
       "dateEntry": null
     },
     {
@@ -29,7 +29,7 @@
       "name": "Natural fruit juice",
       "price": 7,
       "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fmenujugo.png?alt=media&token=1f2d29ee-3d77-4972-b9af-4728ad1804d8",
-      "type": "Breackfast",
+      "type": "Breakfast",
       "dateEntry": null
     },
     {
@@ -84,7 +84,7 @@
       "id": 11,
       "name": "Soda 500ml",
       "price": 7,
-      "image":"https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fgaseosas.png?alt=media&token=4ebea2e8-f568-470c-973d-caa93edc60fd",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fgaseosas.png?alt=media&token=4ebea2e8-f568-470c-973d-caa93edc60fd",
       "type": "Lunch",
       "dateEntry": null
     },
@@ -95,35 +95,9 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fgaseosas.png?alt=media&token=4ebea2e8-f568-470c-973d-caa93edc60fd",
       "type": "Lunch",
       "dateEntry": null
-    },
-    {
-      "name": "sdf",
-      "price": "sd",
-      "id": 1637342486251
-    },
-    {
-      "name": "d",
-      "price": "d",
-      "id": 1637342717117
-    },
-    {
-      "name": "pan",
-      "price": "23",
-      "id": 1637347807963
     }
   ],
   "order": [
-    {
-      "id":23,
-      "userId":301,
-      "client":"Flor",
-      "products":[{
-          "id": 6
-      }],
-      "cantidad":2,
-      "Estatus":"pending",
-      "dateEntry":null,
-      "dateProcessed":null
-    }
+   
   ]
 }

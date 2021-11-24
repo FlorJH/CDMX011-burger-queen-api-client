@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@500&display=swap");
+@import "../../styles/variables";
+.content__order__summary {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: rgba(216, 206, 206, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: fit-content;
+  margin-top: 10px;
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .name__user {
+    display: flex;
+    justify-content: center;
+  }
+  .name {
+    background-color: $primary;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-size: 18px;
+    color: $text-on-secondary;
+    outline: none;
+
+    ::placeholder {
+      color: $text-on-secondary;
+      font-weight: bold;
+    }
+  }
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-family: "Red Rose", cursive;
+    align-items: center;
+  }
+  p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .total {
+    font-family: "Red Rose", cursive;
+    font-size: 35px;
+    color: $primary-light;
+  }
+
+  button {
+    &.secondary-button {
+      background-color: $primary;
+      color: $text-on-secondary;
+      padding: 0;
+      height: 30px;
+      border-radius: 7px;
+      border-color: $primary;
+      border: 1px solid $secondary-light;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      -webkit-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      -moz-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      width: 45%;
+      transition: all 300ms linear;
+      &:active,
+      &:hover {
+        background-color: $secondary;
+        color: $secondary-light;
+        font-weight: bolder;
+      }
+    }
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}

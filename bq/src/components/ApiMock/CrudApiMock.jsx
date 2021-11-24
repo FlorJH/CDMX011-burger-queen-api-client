@@ -3,16 +3,16 @@ import { helpHttp } from "../../helpers/helpHttp.js";
 
 import DataIteration from "../WaiterProfile/DataIteration";
 import PreLoad from "../PreLoad/PreLoad";
-// import Loader from "./Loader";
-// import Message from "./Message";
+
+import NotFound from "../NotFound/NotFound";
 
 const CrudApiMock = () => {
   const [db, setDb] = useState(null);
-//   const [dataToEdit, setDataToEdit] = useState(null);
+
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // let api = helpHttp();
+
   let url = "http://localhost:5000/product";
 
   useEffect(() => {
@@ -32,25 +32,15 @@ const CrudApiMock = () => {
       });
   }, [url]);
 
-  // const deleteData = (id) => {}
-  // const setDataToEdit = (id) => {}
+
   return (
-    <div>
-      
-        {loading && <PreLoad />}
-        {/* {error && (
-          // <Message
-          //   msg={`Error ${error.status}: ${error.statusText}`}
-          //   bgColor="#dc3545"
-          // />
-        )} */}
-        {db && (
-          <DataIteration
-            data={db}
-          />
-        )}
-    </div>
+    <>
+      {loading && <PreLoad />}
+      {error && <NotFound />}
+      {db && <DataIteration data={db} />}
+    </>
   );
 };
 
 export default CrudApiMock;
+
