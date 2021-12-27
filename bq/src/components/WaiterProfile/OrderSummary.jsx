@@ -14,9 +14,9 @@ const OrderSummary = (props) => {
       className="content__order__summary"
       onSubmit={(e) => {
         e.preventDefault();
+        createOrder(props, totalPrice, name); //*
         e.target.reset();
         cleanOrder();
-        createOrder(props, totalPrice, name);
       }}
     >
       <section className="name__user">
@@ -28,7 +28,9 @@ const OrderSummary = (props) => {
         ></input>
       </section>
       <div>
-        {orderItems.length === 0 && <div className="empty-order">Select dishes from menu.</div>}
+        {orderItems.length === 0 && (
+          <div className="empty-order">Select dishes from menu.</div>
+        )}
         {orderItems.map((item) => (
           <section key={item.id} className="summary">
             <p>{item.name}</p>

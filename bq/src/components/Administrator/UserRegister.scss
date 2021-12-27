@@ -1,0 +1,84 @@
+@import "../../styles/variables";
+// .container-register {
+//   min-height: 93vh;
+//   max-width: 100vw;
+// }
+.register-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  .input-form {
+    background-color: rgba(216, 206, 206, 0.2);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    color: $primary;
+    outline: none;
+    text-align: center;
+    width: 28vw;
+    // height: fit-content;
+    ::placeholder {
+      color: $text-on-primary;
+      font-weight: bold;
+    }
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: 0 !important;
+    border-radius: 0;
+    transition: all 300ms linear;
+    padding: 15px;
+    color: $text-on-primary;
+    width: 25vw;
+    height: 20px;
+    text-indent: 4.5vh;
+    font-size: 20px;
+  }
+
+  button {
+    &.register-button {
+      background-color: $primary;
+      color: $text-on-secondary;
+      padding: 0;
+      height: 35px;
+      border-radius: 10px;
+      border-color: $primary;
+      border: 1px solid $secondary-light;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      width: 15%;
+      transition: all 300ms linear;
+      &:hover {
+        background-color: $secondary;
+        color: $secondary-light;
+        font-weight: bolder;
+      }
+    }
+  }
+  
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top: 1.2vh;
+    margin-left: 1vh;
+  }
+  #rolUser{
+    background-color: rgba(216, 206, 206, 0.2);
+    color: $primary;
+    width: 15vw;
+    height: 50px;
+    border-color: 2px solid $line-input;
+  }
+ 
+}

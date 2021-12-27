@@ -52,7 +52,7 @@
       "id": 7,
       "name": "French fries",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fpapasfritas.png?alt=media&token=36d7426c-009b-4680-b239-e07306c20584",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fpixlr-bg-result(3).png?alt=media&token=de1bdb11-1501-4c04-85f8-483d26a75f47",
       "type": "Lunch",
       "dateEntry": null
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Bottled water 500ml",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fagua.png?alt=media&token=659245a2-dd40-4308-b4a2-cef8b0b50a0c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fagua500.png?alt=media&token=2c39ae1d-8438-4527-a8bd-b4c3141aa69d",
       "type": "Lunch",
       "dateEntry": null
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "Bottled water 750ml",
       "price": 7,
-      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fagua.png?alt=media&token=659245a2-dd40-4308-b4a2-cef8b0b50a0c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ac-burger-queen.appspot.com/o/img-burger%2Fagua700.png?alt=media&token=afdc9d04-c6ec-49d2-b940-93602d2f6eb0",
       "type": "Lunch",
       "dateEntry": null
     },

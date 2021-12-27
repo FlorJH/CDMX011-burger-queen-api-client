@@ -1,0 +1,97 @@
+@import "../../../styles/variables";
+.content-order {
+  background-color: rgba(216, 206, 206, 0.2);
+  // height: 35vh;
+  width: 92%;
+  border-radius: 15px;
+  margin-bottom: 3vh;
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw;
+    .content-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  .content-products{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2vh;
+    gap: 2vw;
+    margin: 0px 2vh 3vh 2vh;
+    justify-content: space-evenly;
+      // height: 17vh;
+      // background: rgba(216, 206, 206, 0.2);
+    .content-items{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        background-color: $line-input;
+        width: 18vw;
+        border-radius: 10px;
+        color:$text-on-secondary;
+        display: flex;
+        flex-direction: column;
+     
+        padding: 0%;
+        .img-qty{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #food-name{
+          display: flex;
+          justify-content: center;
+          margin: 1vh 0vw 1vh 0px; ;
+          font-weight: bold;
+          text-align: center;
+        }
+    }
+    .img-order{
+        height: 60px;
+        width: 70px;
+    }
+    
+  }
+  .action-btn{
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    &.secondary-button {
+      background-color: $primary;
+      color: $text-on-secondary;
+      padding: 0;
+      height: 25px;
+      border-radius: 7px;
+      border-color: $primary;
+      border: 1px solid $secondary-light;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      
+      box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
+      -webkit-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      -moz-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
+      width: 20%;
+      font-weight: bold;
+      //transition: all 300ms linear;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $secondary;
+        color: $secondary-light;
+        font-weight: bolder;
+      }
+    }
+  }
+}

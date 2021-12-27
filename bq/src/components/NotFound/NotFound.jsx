@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+//import Footer from "../Footer/Footer";
 import img from "../../assets/notfound.png";
 
  const NotFound = () => {
@@ -8,9 +8,9 @@ import img from "../../assets/notfound.png";
       <div className="container__notfound">
         <img src={img} alt="error" />
       </div>
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </>
   );
 };

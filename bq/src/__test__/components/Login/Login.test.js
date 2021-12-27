@@ -1,6 +1,7 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { render, screen,cleanup } from '@testing-library/react';
-import Login from "../../components/Login/Login";
+import Login from '../../../components/Login/Login';
 
 
 afterEach(cleanup);
@@ -11,10 +12,9 @@ jest.mock('react-router-dom', () => ({
    useNavigate: () => mockHandleSubmit,
  }));
 
+beforeEach(()=>render(<Router><React.Fragment><Login /></React.Fragment></Router>));
 
-beforeEach(()=>render(<Login />));
-
-test('test should render Login', async () => {
+test('should render Login', async () => {
 
     const contentEmail = screen.getByPlaceholderText("Write your Email")
     const contentPassword = screen.getByPlaceholderText("Write your Password")
@@ -25,6 +25,5 @@ test('test should render Login', async () => {
     expect(contentPassword).toBeInTheDocument()
     expect(contentSubmit).toBeInTheDocument()
     expect(footer).toBeInTheDocument()
-
 
 });

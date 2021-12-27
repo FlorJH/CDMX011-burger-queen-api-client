@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+.register-form-crud {
+  border-radius: 10px;
+  margin: 7px;
+  height: fit-content;
+  margin-top: 10px;
+   padding: 0px;
+  cursor: pointer;
+  display: flex;
+  
+    form {
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      gap: 4.6vh; //2.6
+      justify-content:space-evenly;
+      align-content: center;
+      align-items: center;
+      background-color: rgba(216, 206, 206, 0.2);
+      border-radius: 20px;
+      margin: 40px 0px;
+      padding: 30px;
+    }
+  label{
+    font-size: 1.5em;
+    margin-right: 3vw;
+  }
+.labels-coumn{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+line-height: 30px;
+color:$text-on-secondary;
+background-color:$primary;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+height: 15vh;
+width: 48vw;
+}
+  .user-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 43vw;
+    height: 15vh;
+    background-color: #e7dfd617;
+    border-radius: 10px;
+  }
+  .icon-user {
+    width: 25px;
+    height: 20px;
+    margin: 5px 5px 0px 10px;
+  }
+.btn-actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:0px 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  .user-container{
+    width: 100%;
+    height: 10vh;
+  }
+  .labels-coumn{
+  height: 10vh;
+  width: 50vw;
+  }
+}
+  }

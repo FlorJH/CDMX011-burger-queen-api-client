@@ -11,7 +11,7 @@ export const FoodMenu = ( props ) => {
       }}
     >
       <picture className="content__img">
-        <img className="img-menu" src={product.image} alt={product.image} />
+        <img className="img-menu" src={product.image} alt="Food ilustration" />
       </picture>
       <p className="title__food">{product.name}</p>
     </div>

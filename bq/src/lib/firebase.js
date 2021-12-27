@@ -1,22 +1,78 @@
 /* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
-
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  // setPersistence,
+  // browserSessionPersistence
+} from "firebase/auth";
+import { getFirestore, doc, setDoc, getDocs, collection, updateDoc, query, where} from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyDgGPjuT8v8_3XiV1MjOoKc7N9yw2PF8_s",
-  authDomain: "ac-burger-queen.firebaseapp.com",
-  projectId: "ac-burger-queen",
-  storageBucket: "ac-burger-queen.appspot.com",
-  messagingSenderId: "2882002794",
-  appId: "1:2882002794:web:3918e59ce04810040e0f13",
-  measurementId: "G-37S6DD8YC4"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 
-initializeApp(firebaseConfig);
-export const auth = getAuth();
+export const firebaseApp = initializeApp(firebaseConfig);
+export const auth = getAuth(firebaseApp);
+export const firestore = getFirestore(firebaseApp);
 
-export const login= (email, password)=>{
-    return signInWithEmailAndPassword(auth, email, password);
-}
+
+
+
+export const login = async (email, password) => {
+  //  await setPersistence(auth, browserSessionPersistence)
+  return signInWithEmailAndPassword(auth, email, password);
+};
+
 export const logout = () => signOut(auth);
+
+export const register = async (email, password, rol) => {
+  const infoUser = await createUserWithEmailAndPassword(
+    auth,
+    email,
+    password
+  ).then((userFirebase) => {
+    return userFirebase;
+  });
+
+  console.log(infoUser.user.uid);
+  const docRef = doc(firestore, `users/${infoUser.user.uid}`);
+  setDoc(docRef, {email: email, rol: rol , active:true, uid:infoUser.user.uid});
+};
+
+export const getUsers = async ( )=>{
+const userQuery = query(collection(firestore, "users"), where("active", "==", true));
+const querySnapshot = await getDocs(userQuery);
+return querySnapshot 
+}
+
+
+export const removeUser = async (userUid) =>{
+  const userRef = doc(firestore, "users", userUid);
+  await updateDoc(userRef, {
+    active: false
+  });
+}
+
+export const updateUser = async (userUid, dataToUpdate) =>{
+ 
+  try{
+    const userRef = doc(firestore, "users", userUid);
+    await updateDoc(userRef, {
+      rol: dataToUpdate
+    });
+  }
+  catch(e){
+    console.log(e);
+
+  }
+  
+}

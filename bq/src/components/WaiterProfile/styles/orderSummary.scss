@@ -15,8 +15,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    padding: 8px;
+
     .quantity-price {
+      margin-left: auto;
+      font-weight: bold;
+    }
+    .items-price {
       margin-left: auto;
     }
   }
@@ -36,7 +41,7 @@
     outline: none;
     text-align: center;
     padding: 4px;
-    width: 34vw;
+    width: 35vw;
     height: 50px;
     ::placeholder {
       color: $text-on-secondary;
@@ -54,9 +59,8 @@
     font-size: 20px;
   }
   .total {
-    font-size: 35px;
+    font-size: 32px;
     color: $primary-light;
-
   }
 
   button {
@@ -71,6 +75,7 @@
       cursor: pointer;
       font-size: 18px;
       margin-top: 5px;
+      margin-left: 8px;
       margin-bottom: 10px;
       box-shadow: 10px 10px 5px 0px rgba(219, 208, 192, 0.51);
       -webkit-box-shadow: 5px 5px 5px 0px rgba(219, 208, 192, 0.51);
@@ -83,7 +88,7 @@
 
       ::placeholder {
         font-size: 3px;
-    }
+      }
       &:active,
       &:hover {
         background-color: $secondary;
@@ -98,16 +103,18 @@
     cursor: pointer;
     margin-left: 30px;
   }
-  // .empty-order{
-
-  // }
+  .empty-order {
+    font-weight: bold;
+    margin-left: 1.5vw;
+    margin-bottom: 1.5vh;
+  }
   @media all and (orientation: portrait) {
     .total {
-      font-size: 25px;
+      font-size: 23px;
     }
     p {
       font-weight: bold;
       font-size: 15px;
-  }
+    }
   }
 }

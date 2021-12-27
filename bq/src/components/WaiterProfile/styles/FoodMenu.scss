@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 102%;
-  margin-right: 9%;
+  width: 100%;
+  margin-right: 11%;
   justify-content: space-evenly;
 }
 .content-menu {
@@ -16,7 +16,7 @@
   width: 46%;
   padding: 0px;
   cursor: pointer;
-  
+
   .content__img {
     background-color: rgba(216, 206, 206, 0.2);
     height: 70px;
@@ -27,7 +27,6 @@
     border-bottom-right-radius: 0px;
     display: flex;
     justify-content: center;
-
   }
 
   .title__food {
@@ -56,7 +55,5 @@
     // .content-menu {
     //   // width: 50%;
     // }
-    
   }
 }
-

@@ -5,9 +5,9 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones](#4-consideraciones)
-* [5. Criterios de aceptación del proyecto](#5-criterios-de-aceptación-del-proyecto)
-* [6. Pistas / tips](#6-pistas--tips)
+* [4. Criterios de aceptación del proyecto](#4-criterios-de-aceptación-del-proyecto)
+* [5. Prototipos de alta fidelidad](#5-prototipos-de-alta-fidelidad)
+* [6. Link a Figma y página desplegada](#6-link-a-figma-y-pagina-desplegada)
 
 ***
 
@@ -19,35 +19,11 @@ a la cocina para que se preparen ordenada y eficientemente.
 
 Este proyecto tiene dos áreas: interfaz (cliente) y API (servidor). Nuestra
 clienta nos ha solicitado desarrollar la interfaz que se integre con la API
-que otro equipo de desarrolladoras está trabajando simultáneamente
+que otro equipo de desarrolladoras está trabajando simultáneamente.
 
-[React](https://reactjs.org/) y [Angular](https://angular.io/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
-
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
-
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
+Esta desarrollada con la librería React, JSON Server y firebase.
 
 ## 2. Resumen del proyecto
-
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
-
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
 Esta es la información que tenemos dxl clientx:
 
@@ -90,445 +66,99 @@ con todos sus _productos_. La usuaria debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
-
-Además la clienta nos ha dado un [link a la documentación](https://laboratoria.github.io/burger-queen-api/)
-que especifica el comportamiento esperado de la API HTTP que deberás consumir.
-Ahí puedes encontrar todos los detalles de los _endpoints_, como por ejemplo
-qué parámetros esperan, qué deben responder, etc.
-
-El objetivo principal de es aprender a construir una _interfaz web_ usando
-el _framework_ elegido (React, Angular o Vue). Todos estos frameworks de
-Front-end tratan de solucionar el mismo problema: **cómo mantener la interfaz
-y el estado sincronizados**. Así que esta experiencia espera familiarizarte con
-el concepto de _estado de pantalla_, y como cada cambio sobre el estado se va
-a ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
-
 ## 3. Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
-
-  <details><summary>Links</summary><p>
-
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
-
+- [x] **Uso de HTML semántico**
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [x] **Uso de selectores de CSS**
 
-  <details><summary>Links</summary><p>
+- [x] **Modelo de caja (box model): borde, margen, padding**
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+- [x] **Uso de flexbox en CSS**
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
-
-  <details><summary>Links</summary><p>
-
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
-
-- [ ] **Uso de flexbox en CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
-
-- [ ] **Uso de CSS Grid Layout**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
-</p></details>
-
-- [ ] **Uso de media queries**
-
-  <details><summary>Links</summary><p>
-
-  * [CSS media queries - MDN](https://developer.mozilla.org/es/docs/CSS/Media_queries)
-</p></details>
-
+- [x] **Uso de media queries**
 ### JavaScript
 
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
+- [x] **Pruebas unitarias (unit tests)**
 
 - [ ] **Pruebas asíncronas**
 
-  <details><summary>Links</summary><p>
-
-  * [Tests de código asincrónico con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/asynchronous)
-</p></details>
-
 - [ ] **Uso de mocks y espías**
 
-  <details><summary>Links</summary><p>
+- [x] **Módulos de ECMAScript (ES Modules)**
 
-  * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
-</p></details>
+- [x] **Uso de linter (ESLINT)**
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [x] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [x] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [x] **GitHub: Despliegue con GitHub Pages**
 
-  <details><summary>Links</summary><p>
+- [x] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-- [ ] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
+- [x] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
 
 ### HTTP
 
-- [ ] **Consulta o petición (request) y respuesta (response).**
+- [x] **Consulta o petición (request) y respuesta (response).**
 
-  <details><summary>Links</summary><p>
+- [x] **Cabeceras (headers)**
 
-  * [Generalidades del protocolo HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Overview)
-  * [Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages)
-</p></details>
+- [x] **Cuerpo (body)**
 
-- [ ] **Cabeceras (headers)**
-
-  <details><summary>Links</summary><p>
-
-  * [HTTP headers - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Headers)
-</p></details>
-
-- [ ] **Cuerpo (body)**
-
-  <details><summary>Links</summary><p>
-
-  * [Cuerpo de Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages#cuerpo)
-</p></details>
-
-- [ ] **Verbos HTTP**
-
-  <details><summary>Links</summary><p>
-
-  * [Métodos de petición HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
-</p></details>
+- [x] **Verbos HTTP**
 
 - [ ] **Codigos de status de HTTP**
 
-  <details><summary>Links</summary><p>
-
-  * [Códigos de estado de respuesta HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
-  * [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
-</p></details>
-
-- [ ] **Encodings y JSON**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción a JSON - Documentación oficial](https://www.json.org/json-es.html)
-</p></details>
-
-- [ ] **CORS (Cross-Origin Resource Sharing)**
-
-  <details><summary>Links</summary><p>
-
-  * [Control de acceso HTTP (CORS) - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
-</p></details>
-
-### Angular
-
-- [ ] **Components & templates**
-
-  <details><summary>Links</summary><p>
-
-  * [Angular Components Overview - Documentación oficial (en inglés)](https://angular.io/guide/component-overview)
-  * [Introduction to components and templates - Documentación oficial (en inglés)](https://angular.io/guide/architecture-components#introduction-to-components)
-</p></details>
-
-- [ ] **Directivas estructurales (ngIf / ngFor)**
-
-  <details><summary>Links</summary><p>
-
-  * [Writing structural directives - Documentación oficial (en inglés)](https://angular.io/guide/structural-directives)
-</p></details>
-
-- [ ] **@Input | @Ouput**
-
-  <details><summary>Links</summary><p>
-
-  * [Component interaction - Documentación oficial (en inglés)](https://angular.io/guide/component-interaction#component-interaction)
-</p></details>
-
-- [ ] **Creación y uso de servicios**
-
-  <details><summary>Links</summary><p>
-
-  * [Providing services - Documentación oficial (en inglés)](https://angular.io/guide/architecture-services#providing-services)
-</p></details>
-
-- [ ] **Manejo de rutas**
-
-  <details><summary>Links</summary><p>
-
-  * [In-app navigation: routing to views - Documentación oficial (en inglés)](https://angular.io/guide/router)
-</p></details>
-
-- [ ] **Creación y uso Observables.**
-
-  <details><summary>Links</summary><p>
-
-  * [Observables in Angular - Documentación oficial (en inglés)](https://angular.io/guide/observables-in-angular)
-</p></details>
-
-- [ ] **Uso de HttpClient**
-
-  <details><summary>Links</summary><p>
-
-  * [Communicating with backend services using HTTP - Documentación oficial (en inglés)](https://angular.io/guide/http)
-</p></details>
-
-- [ ] **Estilos de componentes (ngStyle / ngClass)**
-
-  <details><summary>Links</summary><p>
-
-  * [Template syntax - Documentación oficial (en inglés)](https://angular.io/guide/template-syntax#built-in-directives)
-</p></details>
+- [x] **Encodings y JSON**
 
 ### React
 
-- [ ] **JSX**
+- [x] **JSX**
 
-  <details><summary>Links</summary><p>
+- [x] **Componentes y propiedades (props)**
 
-  * [Presentando JSX - Documentación oficial](https://es.reactjs.org/docs/introducing-jsx.html)
-</p></details>
+- [x] **Manejo de eventos**
 
-- [ ] **Componentes y propiedades (props)**
+- [x] **Listas y keys**
 
-  <details><summary>Links</summary><p>
-
-  * [Componentes y propiedades - Documentación oficial](https://es.reactjs.org/docs/components-and-props.html)
-</p></details>
-
-- [ ] **Manejo de eventos**
-
-  <details><summary>Links</summary><p>
-
-  * [Manejando eventos - Documentación oficial](https://es.reactjs.org/docs/handling-events.html)
-</p></details>
-
-- [ ] **Listas y keys**
-
-  <details><summary>Links</summary><p>
-
-  * [Listas y keys - Documentación oficial](https://es.reactjs.org/docs/lists-and-keys.html)
-</p></details>
-
-- [ ] **Renderizado condicional**
-
-  <details><summary>Links</summary><p>
-
-  * [Renderizado condicional - Documentación oficial](https://es.reactjs.org/docs/conditional-rendering.html)
-</p></details>
+- [x] **Renderizado condicional**
 
 - [ ] **Elevación de estado**
 
-  <details><summary>Links</summary><p>
+- [x] **Hooks**
 
-  * [Levantando el estado - Documentación oficial](https://es.reactjs.org/docs/lifting-state-up.html)
-</p></details>
+- [x] **CSS modules**
 
-- [ ] **Hooks**
-
-  <details><summary>Links</summary><p>
-
-  * [Presentando Hooks - Documentación oficial](https://es.reactjs.org/docs/hooks-intro.html)
-</p></details>
-
-- [ ] **CSS modules**
-
-  <details><summary>Links</summary><p>
-
-  * [Adding a CSS Modules Stylesheet - Documentación de Create React App (en inglés)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
-</p></details>
-
-- [ ] **React Router**
-
-  <details><summary>Links</summary><p>
-
-  * [Quick Start - Documentación oficial (en inglés)](https://reactrouter.com/web/guides/quick-start)
-</p></details>
-
-### Vue
-
-- [ ] **Instancia de Vue.js**
-
-  <details><summary>Links</summary><p>
-
-  * [La instancia Vue - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html)
-</p></details>
-
-- [ ] **Datos y métodos**
-
-  <details><summary>Links</summary><p>
-
-  * [Datos y Métodos - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-</p></details>
-
-- [ ] **Uso y creación de componentes**
-
-  <details><summary>Links</summary><p>
-
-  * [Conceptos Básicos de Componentes - Documentación oficial](https://es.vuejs.org/v2/guide/components.html)
-</p></details>
-
-- [ ] **Props**
-
-  <details><summary>Links</summary><p>
-
-  * [Pasando datos a componentes secundarios con Props - Documentación oficial](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-</p></details>
-
-- [ ] **Directivas (v-bind | v-model)**
-
-  <details><summary>Links</summary><p>
-
-  * [v-bind - Documentación oficial](https://es.vuejs.org/v2/api/#v-bind)
-  * [Binding en Formularios - Documentación oficial](https://es.vuejs.org/v2/guide/forms.html)
-</p></details>
-
-- [ ] **Iteración (v-for)**
-
-  <details><summary>Links</summary><p>
-
-  * [Mapeando una matriz a elementos con v-for - Documentación oficial](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for)
-</p></details>
-
-- [ ] **Eventos (v-on)**
-
-  <details><summary>Links</summary><p>
-
-  * [Manejo de eventos - Documentación oficial](https://es.vuejs.org/v2/guide/events.html)
-</p></details>
-
-- [ ] **Propiedades Computadas y Observadores**
-
-  <details><summary>Links</summary><p>
-
-  * [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-</p></details>
-
-- [ ] **Routing**
-
-  <details><summary>Links</summary><p>
-
-  * [Getting Started - Documentación oficial de Vue Router](https://router.vuejs.org/guide/#html)
-</p></details>
-
-- [ ] **Clases y Estilos**
-
-  <details><summary>Links</summary><p>
-
-  * [Enlace Clases y Estilos - Documentación oficial](https://es.vuejs.org/v2/guide/class-and-style.html)
-</p></details>
+- [x] **React Router**
 
 ### UX (User eXperience)
 
-- [ ] **Diseñar la aplicación pensando en y entendiendo al usuario**
+- [x] **Diseñar la aplicación pensando en y entendiendo al usuario**
 
-- [ ] **Crear prototipos para obtener feedback e iterar**
+- [x] **Crear prototipos para obtener feedback e iterar**
 
-- [ ] **Aplicar los principios de diseño visual (contraste, alineación, jerarquía)**
+- [x] **Aplicar los principios de diseño visual (contraste, alineación, jerarquía)**
 
-- [ ] **Planear y ejecutar tests de usabilidad**
+- [x] **Planear y ejecutar tests de usabilidad**
 
-## 4. Consideraciones
-
-Este proyecto se debe "resolver" de a pares. Recuerda que deberas de consumir una
-API que desarrollaran tus compañeras, sin embargo no debes esperar a que esta API
-este terminada para empezar a codear, puedes utilizar herramientas
-como [nock](https://github.com/nock/nock), [json-server](https://www.npmjs.com/package/json-server)
-o [mockoon](https://mockoon.com) para mockear la API.
-
-Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
-hasta la historia que puedas en el tiempo especificado.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-
-En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://reactjs.org/) o
-[Angular](https://angular.io/)).
-
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**mobile-first**.
-
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
- el tamaño y aspecto de los botones, la visibilidad del estado actual del
- pedido, etc.
-
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
-
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
-
-Los tests unitarios deben cubrir un mínimo del 90% de _statements_, _functions_,
-_lines_ y _branches_.
-
-Por otro lado, deberás definir la estructura de carpetas y archivos que consideres
-necesaria. Puedes guiarte de las convenciones del _framework_ elegido. Por ende,
-los _tests_ y el _setup_ necesario para ejecutarlos, serán hechos por ti.
-
-## 5. Criterios de aceptación del proyecto
+## 4. Criterios de aceptación del proyecto
 
 ### Definición del producto
-
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s)
-nos presenta este _backlog_ que es el resultado de su trabajo con el clientx
-hasta hoy.
-
-***
 
 #### [Historia de usuario 1] Mesero/a debe poder ingresar al sistema, si el admin ya le ha asignado credenciales
 
@@ -667,25 +297,23 @@ para mantener actualizado el menú.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 
 ***
+## 5. Prototipos de Alta Fidelidad
 
-## 6. Pistas / Tips
+![Screenshot from 2021-12-16 17-25-41](https://user-images.githubusercontent.com/7150868/146464281-afda8768-7ddc-4d09-9530-6ada4cc5a413.png)
+![Screenshot from 2021-12-16 17-27-01](https://user-images.githubusercontent.com/7150868/146464282-661a286c-866a-45df-acc8-bb2ed45c4a91.png)
+![Screenshot from 2021-12-16 17-27-56](https://user-images.githubusercontent.com/7150868/146464284-addc10bb-f9d1-44e5-89ff-6550511c7651.png)
+![Screenshot from 2021-12-16 17-29-04](https://user-images.githubusercontent.com/7150868/146464022-0e6dcdc7-9c3c-4ddc-80a1-6bbd0707a08a.png)
 
-### Frameworks / libraries
+***
+## 6. Link a Figma y página desplegada
 
-* [React](https://reactjs.org/)
-* [Angular](https://angular.io/)
+:earth_asia: Página desplegada :point_right: https://ac-burger-queen.web.app/ <br>
+Usuarios de pruebas:<br>
+:bowtie: waiter@burgerqueen.com :key: 123456.<br>
+:man_with_turban: chef@burgerqueen.com  :key: 123456.<br>
+:sunglasses: admin@burgerqueen.com  :key: 123456.<br>
 
-### Herramientas
+:art: Link a Figma :point_right: https://www.figma.com/file/9PIyIBI3BoowSx0DWnWLz4/BQ-API?node-id=0%3A1
 
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
-* [json-server](https://www.npmjs.com/package/json-server)
-* [mockoon](https://mockoon.com)
-* [nock](https://github.com/nock/nock)
 
-### PWA
 
-* [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)

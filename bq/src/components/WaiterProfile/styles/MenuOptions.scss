@@ -1,7 +1,7 @@
 .content-menu-option {
   display: flex;
   flex-direction: column;
-  width: 46vw;;
+  width: 46vw;
   height: 70px;
   background-color: rgba(216, 206, 206, 0.5);
   padding: 5px;
@@ -40,7 +40,8 @@
       width: 40%;
       font-weight: bold;
       //transition: all 300ms linear;
-      &:active, &:focus,
+      &:active,
+      &:focus,
       &:hover {
         background-color: $secondary;
         color: $secondary-light;
@@ -56,5 +57,5 @@
   .content-menu-option {
     width: 45vw;
     margin-right: 12%;
-}
+  }
 }

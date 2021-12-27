@@ -5,8 +5,18 @@
 @import "../components/NavBar.jsx/NavBar.scss";
 @import "../components/NotFound/NotFound.scss";
 @import "../components/PreLoad/PreLoad.scss";
-
 @import "../components/WaiterProfile/styles/MenuOptions.scss";
 @import "../components/WaiterProfile/styles/orderSummary.scss";
 @import "../components/WaiterProfile/styles/FoodMenu.scss";
-@import "../components/KitchenRoom/KitchenRoom.scss";
+@import "../components/KitchenRoom/styles/KitchenRoom.scss";
+@import "../components/KitchenRoom/styles/FoodOrder.scss";
+@import "../components/WaiterProfile/Orders/FoodOrdersReady.scss";
+@import "../components/Administrator/UserRegister.scss";
+@import "../components/Administrator/ManageProducts/styles/ManagerProducts.scss";
+@import "../components/Administrator/ManageProducts/styles/CrudForm.scss";
+@import "../components/Administrator/ManageProducts/styles/CrudTabletProducts.scss";
+@import "../components/Administrator/AdminProfile.scss";
+@import "../components/Administrator/ProfileCrud.scss";
+@import "../components/Administrator/AdminProfile.scss";
+@import "../components/Administrator/ProfileCrud.scss";
+

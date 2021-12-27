@@ -11,11 +11,12 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden !important;
-  line-height: 10px;
+  line-height: 16px;
   color: $text-on-primary;
+  max-width: 200vw;
 }
 .root {
   min-height: 90vh;
-  max-width: 50vw;
+
   overflow-x: hidden;
 }
